@@ -14,3 +14,10 @@ describe('#isosceles_tri') do
     expect(iso.isosceles_tri()).to(eq("Isosceles"))
   end
 end
+
+describe('#scalene_tri') do
+  it('determines whether 3 sides make a scalene triangle') do
+    scal = Triangle.new(3,4,2)
+    expect(scal.scalene_tri()).to(eq('Scalene'))
+  end
+end
