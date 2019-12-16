@@ -21,3 +21,10 @@ describe('#scalene_tri') do
     expect(scal.scalene_tri()).to(eq('Scalene'))
   end
 end
+
+describe('#not_tri') do
+  it('determines whether 3 sides do not make a triangle') do
+    not_tri = Triangle.new(3,4,2)
+    expect(not_tri.impossible()).to(eq('Not a triangle'))
+  end
+end

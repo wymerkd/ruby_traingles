@@ -24,4 +24,10 @@ class Triangle
       "Scalene"
     end
   end
+
+  def impossible
+    if side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2
+      "Not a triangle"
+    end
+  end
 end
