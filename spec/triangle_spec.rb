@@ -24,7 +24,7 @@ end
 
 describe('#not_tri') do
   it('determines whether 3 sides do not make a triangle') do
-    not_tri = Triangle.new(3,4,2)
+    not_tri = Triangle.new(1,1,3)
     expect(not_tri.impossible()).to(eq('Not a triangle'))
   end
 end
