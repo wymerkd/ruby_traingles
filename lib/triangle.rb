@@ -7,27 +7,31 @@ class Triangle
     @side3 = side3
   end
 
-  def equilateral_tri
-    if side1 == side2 && side2 == side3
+  def triangle_checker()
+    if self.impossible
+      "Not a triangle"
+    elsif self.equilateral_tri
       "Equilateral"
-    end
-  end
-
-  def isosceles_tri
-    if side1 == side2 || side2 == side3 || side3 == side1
+    elsif self.isosceles_tri
       "Isosceles"
-    end
-  end
-
-  def scalene_tri
-    if side1 != side2 || side2 != side3 || side3 != side1
+    else
       "Scalene"
     end
   end
 
-  def impossible
-    if side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2
-      "Not a triangle"
-    end
+  def impossible # ? bool
+    @side1 + @side2 <= @side3 || @side2 + @side3 <= @side1 || @side3 + @side1 <= @side2
+  end
+
+  def equilateral_tri
+    @side1 == @side2 && @side2 == @side3
+  end
+
+  def isosceles_tri
+    @side1 == @side2 || @side2 == @side3 || @side3 == @side1
+  end
+
+  def scalene_tri
+    @side1 != @side2 || @side2 != @side3 || @side3 != @side1
   end
 end
