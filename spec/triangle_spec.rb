@@ -10,7 +10,7 @@ end
 
 describe('#isosceles_tri') do
   it('determines whether 3 sides make an isosceles triangle') do
-    equil = Triangle.new(3,3,4)
-    expect(equil.equilateral_tri()).to(eq("Isosceles"))
+    iso = Triangle.new(3,3,4)
+    expect(iso.isosceles_tri()).to(eq("Isosceles"))
   end
 end

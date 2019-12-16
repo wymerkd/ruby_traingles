@@ -13,11 +13,11 @@ class Triangle
     end
   end
 
-  # def isosceles_tri
-  #   if side1 == side2 || side2 == side3 || side3 == side1
-  #     "Isosceles"
-  #   end
-  # end
+  def isosceles_tri
+    if side1 == side2 || side2 == side3 || side3 == side1
+      "Isosceles"
+    end
+  end
 
   # def triangle_check(side1, side2, side3)
   #   if side1 == side2 && side2 == side3 # equilateral
